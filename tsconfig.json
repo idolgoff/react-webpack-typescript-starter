@@ -6,9 +6,24 @@
         "module": "commonjs",
         "target": "es5",
         "jsx": "react",
-        "lib": ["es5", "es6", "dom"]
+        "lib": ["es5", "es6", "dom"],
+        "baseUrl": ".",
+        "paths": {
+            "@screens": ["src/screens"],
+            "@components": ["src/components"],
+            "@routes": ["src/routes"],
+            "@redux/*": ["src/redux/*"],
+            "@constants": ["src/constants.ts"],
+        },
+        "skipLibCheck": true,
     },
     "include": [
         "./src/**/*"
-    ]
+    ],
+    "exclude": [
+        "node_modules"
+      ],
+    "awesomeTypescriptLoaderOptions": {
+       "transpileOnly": true
+    }
 }

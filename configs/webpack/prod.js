@@ -1,5 +1,7 @@
 // production config
 const merge = require('webpack-merge');
+const {aliases} = require("./aliases");
+
 const {resolve} = require('path');
 
 const commonConfig = require('./common');
@@ -14,4 +16,7 @@ module.exports = merge(commonConfig, {
   },
   devtool: 'source-map',
   plugins: [],
+  resolve: {
+    alias: aliases(resolve)
+  }
 });
