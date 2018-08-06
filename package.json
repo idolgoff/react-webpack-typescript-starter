@@ -1,27 +1,29 @@
 {
   "name": "react-webpack-typescript-starter",
   "version": "0.1.0",
-  "description": "Starter kit for React, Webpack (with Hot Module Replacement), Typescript and Babel.",
+  "description": "Starter kit for React + Redux + React Router, Webpack (with Hot Module Replacement), Typescript and Babel.",
   "keywords": [
     "react",
+    "redux",
     "webpack",
     "typescript",
     "babel",
     "sass",
+    "stylus",
     "hmr",
     "starter",
     "boilerplate"
   ],
-  "author": "Viktor Persson",
+  "author": "Ivan Dolgov, forked from Viktor Persson",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vikpe/react-webpack-typescript-starter.git"
+    "url": "git+https://github.com/idolgoff/react-webpack-typescript-starter.git"
   },
   "bugs": {
-    "url": "https://github.com/vikpe/react-webpack-typescript-starter/issues"
+    "url": "https://github.com/idolgoff/react-webpack-typescript-starter/issues"
   },
-  "homepage": "https://github.com/vikpe/react-webpack-typescript-starter",
+  "homepage": "https://github.com/idolgoff/react-webpack-typescript-starter",
   "scripts": {
     "build": "npm run clean-dist && webpack -p --config=configs/webpack/prod.js",
     "clean-dist": "rm -f -r -d dist",
@@ -61,6 +63,7 @@
     "react-feather": "^1.1.1",
     "react-hot-loader": "^4.3.3",
     "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
