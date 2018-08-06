@@ -49,7 +49,6 @@ module.exports = {
   plugins: [
     new CheckerPlugin(),
     new StyleLintPlugin(),
-    new HtmlWebpackPlugin({template: 'index.html.ejs',}),
   ],
   externals: {
     'react': 'React',
