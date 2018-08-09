@@ -2,11 +2,15 @@
 Minimal starter kit with hot module replacement (HMR) for rapid development.
 
 * **[React](https://facebook.github.io/react/)** (16.x)
+* **[Redux](https://redux.js.org/)** (16.x)
+* **[Material-UI](https://material-ui.com/)** (1.x)
 * **[Webpack](https://webpack.js.org/)** (4.x)
+* **[Workbox (PWA)](https://developers.google.com/web/tools/workbox/modules/workbox-webpack-plugin)** (3.x)
 * **[Typescript](https://www.typescriptlang.org/)** (2.x)
 * **[Hot Module Replacement (HMR)](https://webpack.js.org/concepts/hot-module-replacement/)** using [React Hot Loader](https://github.com/gaearon/react-hot-loader) (4.x)
 * [Babel](http://babeljs.io/) (6.x)
 * [SASS](http://sass-lang.com/)
+* [Stylus](http://stylus-lang.com/)
 * [Jest](https://facebook.github.io/jest/) - Testing framework for React applications
 * Production build script
 * Image loading/minification using [Image Webpack Loader](https://github.com/tcoopman/image-webpack-loader)

@@ -3,6 +3,8 @@ const {resolve} = require('path');
 const {CheckerPlugin} = require('awesome-typescript-loader');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const {GenerateSW} = require('workbox-webpack-plugin');
+
 
 module.exports = {
   resolve: {
@@ -49,6 +51,7 @@ module.exports = {
   plugins: [
     new CheckerPlugin(),
     new StyleLintPlugin(),
+    new GenerateSW()
   ],
   externals: {
     'react': 'React',

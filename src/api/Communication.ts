@@ -19,7 +19,6 @@ export class Communication {
 
     protected server: string = "https://jsonplaceholder.typicode.com";
 
-    protected ghostToken: string = null;
     protected token: string = null;
 
     setToken(value: string) {
@@ -48,7 +47,7 @@ export class Communication {
          * If route has it's own absolute url - use it instead of main server
          */
         const url = !(/^http/.test(route)) ?
-            `${this.server}/${route}` + (this.token !== null || this.ghostToken !== null ? `&token=${this.token || this.ghostToken}` : "") :
+            `${this.server}/${route}` + (this.token !== null ? `&token=${this.token}` : "") :
             `${route}`
 
         return new Promise(((resolve, reject) => {
@@ -58,8 +57,11 @@ export class Communication {
             const cmd = method === "POST" ? axios.post : axios.get
             cmd(url, params)
                 .then(data => {
-                    // console.log("$.post:", data)
                     responseData = data.data
+
+                    // Depends on server response object
+                    // Can be valid response with error inside
+                    // Talk to your backend developer
                     if (+responseData.error === 1) {
                         reject(responseData.message)
                     } else {

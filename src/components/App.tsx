@@ -13,7 +13,7 @@ export interface AppProps {
 class App extends React.Component<AppProps, undefined> {
 
     componentDidMount() {
-        console.log("did mount");
+        console.log("It did mount");
         this.props.test();
     }
 
