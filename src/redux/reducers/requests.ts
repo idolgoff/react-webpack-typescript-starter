@@ -16,3 +16,5 @@ export const requests = (state = [], action) => {
             return state
     }
 }
+
+export const getIsLoading = state => !state.requests.length
