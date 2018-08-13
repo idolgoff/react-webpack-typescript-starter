@@ -51,6 +51,25 @@ Command | Description
 `npm run lint:sass` | Run SASS linter
 `npm run start` | (alias of `npm run start-dev`)
 
+## Action creators
+* simpleActionCreator
+```
+export const test = simpleActionCreator("testAction")
+returns {
+    type: "TEST-ACTION"
+}
+```
+* apiActionCreator
+
+```
+export const test = apiActionCreator("test", {
+    actionType?
+    extraAction?
+    response: responseData => responseData, // default behaviour
+    payload: requestParams => 
+})
+```
+
 ## See also
 * [React Webpack Babel Starter](https://github.com/vikpe/react-webpack-babel-starter)
 * [Isomorphic Webapp Starter](https://github.com/vikpe/isomorphic-webapp-starter)

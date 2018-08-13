@@ -106,7 +106,7 @@ export const requestWithApi = api =>
 export const apiActionCreator = requestWithApi(api)
 
 export const simpleActionCreator = actionName => params => dispatch => {
-    let action = {
+    const action = {
         type: snake(actionName).toUpperCase(),
         ...params
     }
